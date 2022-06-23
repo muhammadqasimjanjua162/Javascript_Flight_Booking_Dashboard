@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-nav {
+  background-color: #0f0f41;
+  height: 3rem;
+  color: rgba(255, 255, 255, 0.781);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-nav .social .select-opt #currency {
+  width: 4rem;
+  height: 2rem;
+}
+
+.top-nav .social .select-opt .sel {
+  width: 7rem;
+  height: 2rem;
+}
+
+.top-nav .social .social-media i {
+  font-size: 2rem;
+}
+
+.lang {
+  color: blue;
+}
+
+.social-media i {
+  color: rgba(255, 255, 255, 0.781);
+  color: rgba(255, 255, 255, 0.781);
+}
+
+.down-nav .down-nav-container #navbarSupportedContent ul li a {
+  text-transform: uppercase;
+}
+
+.down-nav .down-nav-container #navbarSupportedContent ul li .home-nav {
+  border-bottom: solid #6f6f1c;
+}
+
+.down-nav .down-nav-container .navbar-brand .lul {
+  width: 7rem;
+}
+
+.text {
+  background-color: #6f6f1c;
+}
+
+.hero {
+  background-image: url(/assets/img/herobox-2.jpg);
+  /* Control the height of the image */
+  min-height: 900px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.tab {
+  border: none;
+}
+
+.hero .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35rem;
+  height: 6rem;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 6;
+}
+
+.hero .tabs .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+}
+
+.hero .tabs .tab .tablink {
+  border: none;
+  z-index: 5;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+
+#para {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#para .main-form .span-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+#para .main-form .span-container .span-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#para .main-form .span-container .span-content .one-way {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #0f0f41;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#para .main-form .span-container .span-content .one-way a i {
+  font-size: 1.3rem;
+}
+
+#para .main-form .span-container .span-content .round-trip {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #0f0f41;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#para .main-form .span-container .span-content .round-trip a i {
+  font-size: 1.3rem;
+}
+
+#para .main-form .span-container .span-content .multicity {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #0f0f41;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#para .main-form .span-container .span-content .multicity a i {
+  font-size: 1.3rem;
+}
+
+#para .main-form .span-container .span-content p {
+  display: inline-block;
+}
+
+#para .main-form .fligts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#para .main-form .fligts-info .loc {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+#para .main-form .fligts-info span {
+  display: inline-block;
+}
+
+#para {
+  width: 70rem;
+  height: 30rem;
+  background-color: aliceblue;
+}
+/*# sourceMappingURL=main.css.map */
