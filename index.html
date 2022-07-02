@@ -36,10 +36,6 @@
     />
 
     <!-- Latest compiled JavaScript -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/javascript/index.js " defer></script>
   </head>
   <body>
     <div class="top-nav">
@@ -396,86 +392,190 @@
       <div id="para">
         <form class="main-form">
           <div class="span-container pt-lg-5">
-            <div class="span-content one-way-content mx-3">
-              <span class="one-way linkActive">
-                <a href="#"
-                  ><i
-                    class="fa fa-check-circle onewayIcon"
-                    style="visibility: hidden"
-                  ></i
-                ></a>
+            <div class="span-content one-way-content mx-3" id="New">
+              <span class="one-way">
+                <i
+                  class="fa fa-check-circle onewayIcon linkactive"
+                  id="onewayclick"
+                ></i>
               </span>
               <p class="mx-1">One way</p>
             </div>
-            <div class="span-content mx-3">
-              <span class="round-trip"> </span>
-              <p class="mx-1">Round Trip</p>
+            <div class="span-content mx-3" id="RoundTrip">
+              <span class="round-trip">
+                <i
+                  class="fa fa-check-circle RoundTripIcon"
+                  id="roundwayclick"
+                ></i>
+              </span>
+              <p class="mx-1">RoundWay</p>
             </div>
             <div class="span-content mx-3">
-              <span class="multicity"></span>
-              <p>Multicity</p>
+              <span class="multicity">
+                <i
+                  class="fa fa-check-circle MultiTripIcon"
+                  id="multiwayclick"
+                ></i>
+              </span>
+              <p class="mx-1">Multicity</p>
             </div>
           </div>
-          <div class="fligts-info">
-            <div class="from">
-              <p>
-                <span class="mb-2"> FROM </span><br />
-                <span class="loc mb-3">Sharja</span><br />
-                SHJ,Sharjah <br />International Airport <br />United Arab
-                Emirates
-              </p>
-            </div>
-            <div class="to">
-              <p>
-                <span class="mb-2"> TO </span> <br />
-                <span class="loc mb-3">New York</span><br />
-                New York,International <br />
-                Airport
-              </p>
-            </div>
-            <div class="departure">
-              <p>
-                <span class="mb-2"> DEPARTURE </span> <br />
-                <span class="loc mb-3">dd/mm/yyyy</span><br />
-                December,2022<br />Sunday
-              </p>
-            </div>
-            <div class="return">
-              <p>
-                <span class="mb-2"> RETURN </span> <br />
-                <span class="loc mb-3">dd/mm/yyyy</span><br />
-                December,2022<br />Sunday
-              </p>
-            </div>
-            <div class="others">
-              <p>
-                <span class="mb-2">OTHERS</span> <br />
-                <span class="loc" class="mb-4">Travelers</span><br />
-                1 Adult,0 infant, 0 children,Economy,Nonstop<br />Sunday
-              </p>
-            </div>
-          </div>
+          <div class="fligts-info" id="flights-information">
+            <!-- from -->
+            <div id="from">
+              <span class="mb-2"> FROM </span><br />
+              <input
+                type="text"
+                id="inputCountry"
+                readonly="readonly"
+                value="Sharja"
+              />
 
-          <div class="form-footer">
-            <div class="route1">
-              <p>Recent Searches</p>
-              <p>ISB</p>
-              <i class="fa-solid fa-arrow-right"></i>
-              <p>BUC</p>
+              <p id="airportTobeChanged">
+                SHJ,Sharja Internationl Airport <br />
+                United Arab Emirates
+              </p>
+
+              <div id="selectflight" style="visibility: hidden">
+                <div id="flight-dropdown ">
+                  <input
+                    type="text"
+                    placeholder="Select the Flight "
+                    id="inputFlight"
+                  />
+                  <div id="flight-1">
+                    <h6>Dubai</h6>
+                    <p>International Airport United Arab Emirates</p>
+                  </div>
+                  <hr />
+                  <div id="flight-2">
+                    <h6>British</h6>
+                    <p>International Airport England</p>
+                  </div>
+                  <hr />
+                  <div id="flight-3">
+                    <h6>Eastern</h6>
+                    <p>International Airport England</p>
+                  </div>
+                  <hr />
+                </div>
+              </div>
             </div>
-            <div class="route2">
-              <p>ISB</p>
-              <i class="fa-solid fa-arrow-right"></i>
-              <p>BUC</p>
+            <div class="vl"></div>
+            <!-- to  -->
+
+            <div id="to">
+              <span class="mb-2"> TO </span> <br />
+              <input
+                type="text"
+                value="NewYork"
+                id="outputCountryField"
+                readonly
+              />
+              <p id="destairport">New York International Airport</p>
+              <div id="destinations" style="visibility: hidden">
+                <input
+                  type="text"
+                  placeholder="Select the Flight from below options"
+                  id="outputFlight"
+                />
+
+                <div id="dest-1" class="pt-4">
+                  <h6>Australia</h6>
+                  <p>International Airport Australia</p>
+                </div>
+                <hr />
+                <div id="dest-2">
+                  <h6>Sydney</h6>
+                  <p>International Airport Sydney</p>
+                </div>
+                <hr />
+                <div id="dest-3">
+                  <h6>America</h6>
+                  <p>International Airport America</p>
+                </div>
+                <hr />
+              </div>
             </div>
-            <div class="route2">
-              <p>ISB</p>
-              <i class="fa-solid fa-arrow-right"></i>
-              <p>BUC</p>
+            <div class="vl"></div>
+            <div id="departure">
+              <p>DEPARTURE</p>
+              <input
+                type="date"
+                placeholder="dd/mm/yyyy"
+                onfocus="(this.type='date')"
+                id="dateInput"
+              />
+              <p>December 2022, Sunday</p>
+            </div>
+            <div class="vl"></div>
+
+            <div id="return">
+              <p>RETURN</p>
+              <input type="date" placeholder="dd/mm/yyyy" id="dateInput2" />
+            </div>
+            <div class="vl"></div>
+            <div id="others">
+              <p>OTHERS</p>
+              <h3>Travelers</h3>
+
+              <span id="counter">1</span>
+              Adult,0 infant, 0 children <br />
+              Economy,Nonstop<br />
+            </div>
+            <div id="selectpassengerFormDiv" style="visibility: hidden">
+              <h3>Class</h3>
+
+              <button type="button" class="flightType">Economy</button>
+              <button type="button" class="flightType2">Premium</button>
+              <button type="button" class="flightType2">Business</button>
+              <button type="button" class="flightType2">First</button>
+              <hr />
+              <h3>Travelers</h3>
+
+              <div id="adults">
+                <h6 class="mx-1">Adults</h6>
+                <p class="mx-1">12+ years</p>
+
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">1</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <div id="children">
+                <h6 class="mx-1">Children</h6>
+                <p class="mx-1"><= 12years</p>
+
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">0</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <div id="infants">
+                <h6 class="mx-1">Infants</h6>
+                <p class="mx-1">>=2 years</p>
+
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">0</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <hr />
+              <h6>Non stop Flight</h6>
+              <div class="nonstopflightBtn">
+                <button class="flightType">Yes</button>
+                <button class="flightType2">No</button>
+              </div>
             </div>
           </div>
+          <div id="AppendHere">clor</div>
         </form>
       </div>
+
+      <!-- Form 2  Round Trip-->
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script defer src="assets/javascript/index.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

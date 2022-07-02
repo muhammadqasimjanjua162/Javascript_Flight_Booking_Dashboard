@@ -124,28 +124,37 @@ $cntnt-clr: rgba(255, 255, 255, 0.781);
 #circle {
   width: 100px;
   height: 100px;
-  background: red;
+
   border-radius: 50%;
 }
 @mixin spanstyle {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   background: $primary-clr;
   border-radius: 50%;
   display: inline-block;
+  color: $primary-clr;
+  position: relative;
 }
 #para {
-  position: absolute;
+  position: relative;
   top: 10rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 0.5rem;
 
   .main-form {
+    width: 75rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     .span-container {
       display: flex;
       margin-bottom: 3rem;
+      margin-top: 6rem;
 
       .span-content {
         display: flex;
@@ -153,6 +162,7 @@ $cntnt-clr: rgba(255, 255, 255, 0.781);
         .one-way {
           @include spanstyle();
           a {
+            color: $primary-clr;
             i {
               font-size: 1.3rem;
             }
@@ -161,42 +171,276 @@ $cntnt-clr: rgba(255, 255, 255, 0.781);
         .round-trip {
           @include spanstyle();
           a {
+            color: $primary-clr;
             i {
               font-size: 1.3rem;
             }
           }
         }
-        .multicity {
-          @include spanstyle();
-          a {
-            i {
-              font-size: 1.3rem;
-            }
+      }
+      .multicity {
+        @include spanstyle();
+        a {
+          color: $primary-clr;
+          i {
+            font-size: 1.3rem;
           }
         }
-        p {
-          display: inline-block;
-        }
       }
-    }
-    .fligts-info {
-      display: flex;
-      justify-content: space-between;
-
-      .loc {
-        font-size: 2rem;
-        font-weight: bolder;
-        margin-bottom: 1.5rem;
-        display: inline-block;
-      }
-      span {
+      p {
         display: inline-block;
       }
     }
   }
+  .fligts-info {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      // display: inline-block;
+    }
+  }
 }
+
 #para {
-  width: 70rem;
-  height: 30rem;
+  width: 80rem;
+
   background-color: aliceblue;
+}
+
+#inputCountry {
+  cursor: pointer;
+  border: none;
+  background-color: aliceblue;
+  font-weight: 900;
+  font-size: 1.5rem;
+  width: 7rem;
+}
+#inputFlight {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  height: 2rem;
+}
+#inputCountry:focus {
+  border: none;
+}
+*:focus {
+  outline: none;
+}
+#selectflight {
+  position: absolute;
+  border: 2px solid black;
+  background-color: aliceblue;
+  width: 15rem;
+  height: 20rem;
+  cursor: pointer;
+  left: 0;
+}
+// to
+
+#outputFlight {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  height: 2rem;
+}
+#destinations {
+  position: absolute;
+  left: 15rem;
+  top: 8rem;
+  width: 15rem;
+  height: 20rem;
+  background-color: aliceblue;
+
+  border: 2px solid black;
+  cursor: pointer;
+}
+#outputCountryField {
+  border: none;
+  background-color: aliceblue;
+  font-weight: 900;
+  font-size: 1.5rem;
+  width: 7rem;
+  cursor: pointer;
+}
+#departure {
+  p {
+    font-weight: 300;
+  }
+  #dateInput {
+    border: none;
+
+    background-color: aliceblue;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+#dateInput::placeholder {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#return {
+  color: rgba(0, 0, 0, 0.5);
+  p {
+    font-weight: 300;
+  }
+  #dateInput2 {
+    border: none;
+
+    background-color: aliceblue;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+#return-date {
+  font-size: 1.5rem;
+}
+
+#adults {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+#children {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+#infants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.flightType {
+  background-color: orange;
+  border: none;
+  color: aliceblue;
+  width: 9rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.flightType2 {
+  background-color: rgb(200, 141, 32);
+  border: none;
+  color: aliceblue;
+  width: 9rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+#selectpassengerFormDiv {
+  position: absolute;
+  top: 10rem;
+  left: 58rem;
+  width: 20rem;
+  border: 1 px solid gray;
+  background-color: aliceblue;
+}
+#return {
+  #dateInput {
+    border: none;
+
+    background-color: aliceblue;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.vl {
+  border-left: 0.2px solid rgb(111, 98, 98);
+  height: 200px;
+}
+#from {
+  width: 17rem;
+  margin: 0 2rem;
+}
+#to {
+  width: 17rem;
+  margin: 0 2rem;
+}
+#departure {
+  width: 17rem;
+  margin: 0 2rem;
+}
+#return {
+  width: 17rem;
+  margin: 0 2rem;
+}
+#others {
+  width: 17rem;
+  margin: 0 2rem;
+}
+input[type="date"] {
+  position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+  content: "\25BC";
+  color: #555;
+  padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+  color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+.flight-dropdown {
+  cursor: pointer;
+}
+#airportTobeChanged {
+  cursor: pointer;
+}
+#from {
+  cursor: pointer;
+}
+.linkactive {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  color: orange;
+  background-color: aliceblue;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 0;
+}
+#addanotherloc {
+  display: block;
+}
+.field {
+  display: inline;
 }
