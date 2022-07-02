@@ -528,4 +528,8 @@ input[type="date"]::-webkit-inner-spin-button {
 .field {
   display: inline;
 }
+
+#PassengersInfo {
+  display: inline;
+}
 /*# sourceMappingURL=main.css.map */

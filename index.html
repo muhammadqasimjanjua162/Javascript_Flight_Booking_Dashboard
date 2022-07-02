@@ -519,17 +519,32 @@
               <p>OTHERS</p>
               <h3>Travelers</h3>
 
-              <span id="counter">1</span>
-              Adult,0 infant, 0 children <br />
-              Economy,Nonstop<br />
+              <span id="adult-count">1 </span> <span>Adult</span>
+              <span>,</span> <span id="infants-count"> 0</span>
+              <span>Infants</span> <span>,</span>
+              <span id="child-count"> 0</span>
+              <span>Children</span>
+              <span id="stop">NonStop</span>
+              <span>,</span>
+              <span id="economy">Economy</span>
             </div>
             <div id="selectpassengerFormDiv" style="visibility: hidden">
               <h3>Class</h3>
+              <div class="example">
+                <button type="button" class="flightType" id="economycheck">
+                  Economy
+                </button>
+                <button type="button" class="flightType2" id="premiumcheck">
+                  Premium
+                </button>
+                <button type="button" class="flightType2" id="businesscheck">
+                  Business
+                </button>
+                <button type="button" class="flightType2" id="firstcheck">
+                  First
+                </button>
+              </div>
 
-              <button type="button" class="flightType">Economy</button>
-              <button type="button" class="flightType2">Premium</button>
-              <button type="button" class="flightType2">Business</button>
-              <button type="button" class="flightType2">First</button>
               <hr />
               <h3>Travelers</h3>
 
@@ -560,8 +575,8 @@
               <hr />
               <h6>Non stop Flight</h6>
               <div class="nonstopflightBtn">
-                <button class="flightType">Yes</button>
-                <button class="flightType2">No</button>
+                <button class="flightType" type="button" id="yes">Yes</button>
+                <button class="flightType2" type="button" id="no">No</button>
               </div>
             </div>
           </div>
@@ -571,6 +586,7 @@
 
       <!-- Form 2  Round Trip-->
     </div>
+    <p>hello</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
