@@ -4,7 +4,6 @@
 //   para.style.visibility = "visible";
 // }
 var res = document.getElementById("from");
-var clicked2 = document.getElementById("flight-dropdown");
 
 var clicked = document.getElementById("selectflight");
 
@@ -242,6 +241,7 @@ function addStyle() {
   roundway.classList.remove("linkactive");
   multiway.classList.remove("linkactive");
   returnDate.style.display = "inline-block";
+  v1.style.display = "block";
 }
 const roundway = document.getElementById("roundwayclick");
 roundway.addEventListener("click", addStyle2);
@@ -251,15 +251,18 @@ function addStyle2() {
   oneway.classList.remove("linkactive");
   multiway.classList.remove("linkactive");
   returnDate.style.display = "inline-block";
+  v1.style.display = "block";
 }
 const multiway = document.getElementById("multiwayclick");
 multiway.addEventListener("click", addStyle3);
+const v1 = document.getElementById("v1");
 
 function addStyle3() {
   multiway.classList.add("linkactive");
   oneway.classList.remove("linkactive");
   roundway.classList.remove("linkactive");
   returnDate.style.display = "none";
+  v1.style.display = "none";
 }
 const returnDate = document.getElementById("return");
 //add another location
@@ -295,3 +298,24 @@ var modal = document.getElementById("from");
 //   var elementToCopy = locationsContainer[0].innerHTML;
 //   document.getElementById("locations-contianer").innerHTML += elementToCopy;
 // });
+// window.onclick = function (event) {
+//   if (!event.target.matches("#from")) {
+//     clicked.style.visibility = "hidden";
+//   }
+// };
+window.onclick = function (event) {
+  if (
+    !event.target.matches("#from") &&
+    !event.target.matches("#airportTobeChanged") &&
+    !event.target.matches("#inputCountry") &&
+    !event.target.matches("#to") &&
+    !event.target.matches("#destairport") &&
+    !event.target.matches("#outputCountryField") &&
+    !event.target.matches("#others")
+  ) {
+    clicked.style.visibility = "hidden";
+
+    destinations.style.visibility = "hidden";
+    parent.style.visibility = "hidden";
+  }
+};

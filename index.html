@@ -421,117 +421,121 @@
             </div>
           </div>
           <!-- <div id="locations-contianer"> -->
-            <!-- <div class="location-row"> -->
-            <div class="fligts-info" id="flights-information">
-              <!-- from -->
-              <div id="from">
-                <span class="mb-2"> FROM </span><br />
+          <!-- <div class="location-row"> -->
+          <div class="fligts-info" id="flights-information">
+            <!-- from -->
+            <div id="from">
+              <span class="mb-2"> FROM </span><br />
+              <input
+                type="text"
+                id="inputCountry"
+                readonly="readonly"
+                value="Sharja"
+              />
+
+              <p id="airportTobeChanged">
+                SHJ,Sharja Internationl Airport <br />
+                United Arab Emirates
+              </p>
+
+              <div id="selectflight" style="visibility: hidden">
                 <input
                   type="text"
-                  id="inputCountry"
-                  readonly="readonly"
-                  value="Sharja"
+                  placeholder="Select the Flight "
+                  id="inputFlight"
                 />
-
-                <p id="airportTobeChanged">
-                  SHJ,Sharja Internationl Airport <br />
-                  United Arab Emirates
-                </p>
-
-                <div id="selectflight" style="visibility: hidden">
-                  <div id="flight-dropdown ">
-                    <input
-                      type="text"
-                      placeholder="Select the Flight "
-                      id="inputFlight"
-                    />
-                    <div id="flight-1">
-                      <h6>Dubai</h6>
-                      <p>International Airport United Arab Emirates</p>
-                    </div>
-                    <hr />
-                    <div id="flight-2">
-                      <h6>British</h6>
-                      <p>International Airport England</p>
-                    </div>
-                    <hr />
-                    <div id="flight-3">
-                      <h6>Eastern</h6>
-                      <p>International Airport England</p>
-                    </div>
-                    <hr />
-                  </div>
+                <div id="flight-1">
+                  <h6>Dubai</h6>
+                  <p>International Airport United Arab Emirates</p>
                 </div>
+                <hr />
+                <div id="flight-2">
+                  <h6>British</h6>
+                  <p>International Airport England</p>
+                </div>
+                <hr />
+                <div id="flight-3">
+                  <h6>Eastern</h6>
+                  <p>International Airport England</p>
+                </div>
+                <hr />
               </div>
-              <div class="vl"></div>
-              <!-- to  -->
+            </div>
+            <div class="vl"></div>
+            <!-- to  -->
 
-              <div id="to">
-                <span class="mb-2"> TO </span> <br />
+            <div id="to">
+              <span class="mb-2"> TO </span> <br />
+              <input
+                type="text"
+                value="NewYork"
+                id="outputCountryField"
+                readonly
+              />
+              <p id="destairport">New York International Airport</p>
+              <div id="destinations" style="visibility: hidden">
                 <input
                   type="text"
-                  value="NewYork"
-                  id="outputCountryField"
-                  readonly
+                  placeholder="Select the Flight from below options"
+                  id="outputFlight"
                 />
-                <p id="destairport">New York International Airport</p>
-                <div id="destinations" style="visibility: hidden">
-                  <input
-                    type="text"
-                    placeholder="Select the Flight from below options"
-                    id="outputFlight"
-                  />
 
-                  <div id="dest-1" class="pt-4">
-                    <h6>Australia</h6>
-                    <p>International Airport Australia</p>
-                  </div>
-                  <hr />
-                  <div id="dest-2">
-                    <h6>Sydney</h6>
-                    <p>International Airport Sydney</p>
-                  </div>
-                  <hr />
-                  <div id="dest-3">
-                    <h6>America</h6>
-                    <p>International Airport America</p>
-                  </div>
-                  <hr />
+                <div id="dest-1" class="pt-4">
+                  <h6>Australia</h6>
+                  <p>International Airport Australia</p>
                 </div>
+                <hr />
+                <div id="dest-2">
+                  <h6>Sydney</h6>
+                  <p>International Airport Sydney</p>
+                </div>
+                <hr />
+                <div id="dest-3">
+                  <h6>America</h6>
+                  <p>International Airport America</p>
+                </div>
+                <hr />
               </div>
-              <div class="vl"></div>
-              <div id="departure">
-                <p>DEPARTURE</p>
-                <input
-                  type="date"
-                  placeholder="dd/mm/yyyy"
-                  onfocus="(this.type='date')"
-                  id="dateInput"
-                />
-                <p>December 2022, Sunday</p>
-              </div>
-              <div class="vl"></div>
+            </div>
+            <div class="vl"></div>
 
-              <div id="return">
-                <p>RETURN</p>
-                <input type="date" placeholder="dd/mm/yyyy" id="dateInput2" />
-              </div>
-              <div class="vl"></div>
-              <div id="others">
-                <p>OTHERS</p>
-                <h3>Travelers</h3>
+            <!-- Departure -->
+            <div id="departure">
+              <p>DEPARTURE</p>
+              <input
+                type="date"
+                placeholder="dd/mm/yyyy"
+                onfocus="(this.type='date')"
+                id="dateInput"
+              />
+              <p>December 2022, Sunday</p>
+            </div>
+            <div class="vl" id="v1"></div>
+            <!-- return -->
+            <div id="return">
+              <p>RETURN</p>
+              <input type="date" placeholder="dd/mm/yyyy" id="dateInput2" />
+            </div>
+            <div class="vl"></div>
+            <!-- others -->
 
-                <span id="adult-count">1 </span> <span>Adult</span>
-                <span>,</span>
-                <span id="child-count"> 1</span>
-                <span>Children</span><span>,</span>
-                <span id="infants-count"> 1</span>
-                <span>Infants</span> <span>,</span>
-                
-                <span id="stop">NonStop</span>
-                <span>,</span>
-                <span id="economy">Economy</span>
-              </div>
+            <div id="others">
+              <p>OTHERS</p>
+              <h3>Travelers</h3>
+
+              <span id="adult-count">1 </span> <span>Adult</span>
+              <span>,</span>
+              <span id="child-count"> 1</span>
+              <span>Children</span><span>,</span>
+              <span id="infants-count"> 1</span>
+              <span>Infants</span> <span>,</span>
+
+              <span id="stop">NonStop</span>
+              <span>,</span>
+              <span id="economy">Economy</span>
+            </div>
+
+            <div id="parent">
               <div id="selectpassengerFormDiv" style="visibility: hidden">
                 <h3>Class</h3>
                 <div class="example">
@@ -584,18 +588,19 @@
                 </div>
               </div>
             </div>
-            
+          </div>
+
           <!-- </div> -->
           <div class="addlocation-button-container">
             <button type="button" id="addlocation-button">Add Stop</button>
           </div>
           <div id="AppendHere">clor</div>
         </form>
-      <!-- </div> -->
+        <!-- </div> -->
 
-      <!-- Form 2  Round Trip-->
+        <!-- Form 2  Round Trip-->
+      </div>
     </div>
-    <p>hello</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
