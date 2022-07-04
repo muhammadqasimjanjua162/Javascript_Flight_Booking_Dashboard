@@ -303,6 +303,7 @@ var modal = document.getElementById("from");
 //     clicked.style.visibility = "hidden";
 //   }
 // };
+
 window.onclick = function (event) {
   if (
     !event.target.matches("#from") &&
@@ -311,11 +312,23 @@ window.onclick = function (event) {
     !event.target.matches("#to") &&
     !event.target.matches("#destairport") &&
     !event.target.matches("#outputCountryField") &&
-    !event.target.matches("#others")
+    !event.target.matches("#selectpassengerFormDiv") &&
+    !event.target.matches("#others") &&
+    !event.target.matches("#others-p") &&
+    !event.target.matches("#others-h3") &&
+    !event.target.matches("#parentSpan")
   ) {
     clicked.style.visibility = "hidden";
 
     destinations.style.visibility = "hidden";
-    parent.style.visibility = "hidden";
+    showOthers.style.visibility = "hidden";
   }
 };
+const counterVar = 4;
+const appendHere = document.getElementById("AppendHere");
+for (var i = 0; i <= counterVar; i++) {
+  const div = document.getElementById("flights-information");
+  const clone = div.cloneNode(true);
+  clone.id = "cloned" + i;
+  appendHere.append(clone);
+}

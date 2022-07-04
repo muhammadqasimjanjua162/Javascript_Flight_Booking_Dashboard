@@ -424,6 +424,7 @@
           <!-- <div class="location-row"> -->
           <div class="fligts-info" id="flights-information">
             <!-- from -->
+            <div class="add"></div>
             <div id="from">
               <span class="mb-2"> FROM </span><br />
               <input
@@ -520,72 +521,71 @@
             <!-- others -->
 
             <div id="others">
-              <p>OTHERS</p>
-              <h3>Travelers</h3>
+              <p id="other-p">OTHERS</p>
+              <h3 id="others-h3">Travelers</h3>
+              <span id="parentSpan">
+                <span id="adult-count">1 </span> <span>Adult</span>
+                <span>,</span>
+                <span id="child-count"> 1</span>
+                <span>Children</span><span>,</span>
+                <span id="infants-count"> 1</span>
+                <span>Infants</span> <span>,</span>
 
-              <span id="adult-count">1 </span> <span>Adult</span>
-              <span>,</span>
-              <span id="child-count"> 1</span>
-              <span>Children</span><span>,</span>
-              <span id="infants-count"> 1</span>
-              <span>Infants</span> <span>,</span>
-
-              <span id="stop">NonStop</span>
-              <span>,</span>
-              <span id="economy">Economy</span>
+                <span id="stop">NonStop</span>
+                <span>,</span>
+                <span id="economy">Economy</span>
+              </span>
             </div>
 
-            <div id="parent">
-              <div id="selectpassengerFormDiv" style="visibility: hidden">
-                <h3>Class</h3>
-                <div class="example">
-                  <button type="button" class="flightType" id="economycheck">
-                    Economy
-                  </button>
-                  <button type="button" class="flightType2" id="premiumcheck">
-                    Premium
-                  </button>
-                  <button type="button" class="flightType2" id="businesscheck">
-                    Business
-                  </button>
-                  <button type="button" class="flightType2" id="firstcheck">
-                    First
-                  </button>
-                </div>
+            <div id="selectpassengerFormDiv" style="visibility: hidden">
+              <h3>Class</h3>
+              <div class="example">
+                <button type="button" class="flightType" id="economycheck">
+                  Economy
+                </button>
+                <button type="button" class="flightType2" id="premiumcheck">
+                  Premium
+                </button>
+                <button type="button" class="flightType2" id="businesscheck">
+                  Business
+                </button>
+                <button type="button" class="flightType2" id="firstcheck">
+                  First
+                </button>
+              </div>
 
-                <hr />
-                <h3>Travelers</h3>
+              <hr />
+              <h3>Travelers</h3>
 
-                <div id="adults">
-                  <h6 class="mx-1">Adults</h6>
-                  <p class="mx-1">12+ years</p>
+              <div id="adults">
+                <h6 class="mx-1">Adults</h6>
+                <p class="mx-1">12+ years</p>
 
-                  <button type="button" id="decrement" class="btn2">-</button>
-                  <button type="button" id="default" class="btn2">1</button>
-                  <button type="button" id="increment" class="btn2">+</button>
-                </div>
-                <div id="children">
-                  <h6 class="mx-1">Children</h6>
-                  <p class="mx-1"><= 12years</p>
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">1</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <div id="children">
+                <h6 class="mx-1">Children</h6>
+                <p class="mx-1"><= 12years</p>
 
-                  <button type="button" id="decrement" class="btn2">-</button>
-                  <button type="button" id="default" class="btn2">0</button>
-                  <button type="button" id="increment" class="btn2">+</button>
-                </div>
-                <div id="infants">
-                  <h6 class="mx-1">Infants</h6>
-                  <p class="mx-1">>=2 years</p>
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">0</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <div id="infants">
+                <h6 class="mx-1">Infants</h6>
+                <p class="mx-1">>=2 years</p>
 
-                  <button type="button" id="decrement" class="btn2">-</button>
-                  <button type="button" id="default" class="btn2">0</button>
-                  <button type="button" id="increment" class="btn2">+</button>
-                </div>
-                <hr />
-                <h6>Non stop Flight</h6>
-                <div class="nonstopflightBtn">
-                  <button class="flightType" type="button" id="yes">Yes</button>
-                  <button class="flightType2" type="button" id="no">No</button>
-                </div>
+                <button type="button" id="decrement" class="btn2">-</button>
+                <button type="button" id="default" class="btn2">0</button>
+                <button type="button" id="increment" class="btn2">+</button>
+              </div>
+              <hr />
+              <h6>Non stop Flight</h6>
+              <div class="nonstopflightBtn">
+                <button class="flightType" type="button" id="yes">Yes</button>
+                <button class="flightType2" type="button" id="no">No</button>
               </div>
             </div>
           </div>
