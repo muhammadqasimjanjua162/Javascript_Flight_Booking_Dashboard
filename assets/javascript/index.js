@@ -96,18 +96,19 @@ var decrementBtn = document.getElementById("adults").children[2];
 var incrementBtn = document.getElementById("adults").children[4];
 
 var defaultBtn = document.getElementById("adults").children[3];
+const adultcounts = document.getElementById("adult-count");
 
-var count = 0;
+var count = 1;
 defaultBtn.innerHTML = count;
 decrementBtn.addEventListener("click", DecreaseValue);
 const adultCounts = document.getElementById("adult-count");
 function DecreaseValue() {
-  if (count <= 0) {
+  if (count <= 1) {
     count = 1;
   } else {
+    count--;
     defaultBtn.innerHTML = count;
     adultCounts.innerHTML = count;
-    count--;
   }
 }
 
@@ -117,6 +118,34 @@ function IncreaseValue() {
   defaultBtn.innerHTML = count;
   adultCounts.innerHTML = count;
 }
+
+//infants
+var decrementBtn3 = document.getElementById("infants").children[2];
+
+var incrementBtn3 = document.getElementById("infants").children[4];
+
+var defaultBtn3 = document.getElementById("infants").children[3];
+const infantscount3 = document.getElementById("infants-count");
+
+var count3 = 1;
+defaultBtn3.innerHTML = count3;
+decrementBtn3.addEventListener("click", DecreaseValue3);
+function DecreaseValue3() {
+  if (count3 <= 1) {
+    count3 = 1;
+  } else {
+    count3--;
+    defaultBtn3.innerHTML = count3;
+    infantscount3.innerHTML = count3;
+  }
+}
+
+incrementBtn3.addEventListener("click", IncreaseValue3);
+function IncreaseValue3() {
+  count3++;
+  defaultBtn3.innerHTML = count3;
+  infantscount3.innerHTML = count3;
+}
 //children
 var decrementBtn2 = document.getElementById("children").children[2];
 
@@ -125,51 +154,26 @@ var incrementBtn2 = document.getElementById("children").children[4];
 var defaultBtn2 = document.getElementById("children").children[3];
 const childCounts = document.getElementById("child-count");
 
-var count = 0;
-defaultBtn2.innerHTML = count;
+var count2 = 1;
+defaultBtn2.innerHTML = count2;
 decrementBtn2.addEventListener("click", DecreaseValue2);
 function DecreaseValue2() {
-  if (count <= 0) {
-    count = 0;
+  if (count2 <= 1) {
+    count2 = 1;
   } else {
-    count--;
-    defaultBtn2.innerHTML = count;
-    childCounts.innerHTML = count;
+    count2--;
+    defaultBtn2.innerHTML = count2;
+    childCounts.innerHTML = count2;
   }
 }
 
 incrementBtn2.addEventListener("click", IncreaseValue2);
 function IncreaseValue2() {
-  count++;
-  defaultBtn2.innerHTML = count;
-  childCounts.innerHTML = count;
-}
-//infants
-var decrementBtn3 = document.getElementById("infants").children[2];
-
-var incrementBtn3 = document.getElementById("infants").children[4];
-
-var defaultBtn3 = document.getElementById("infants").children[3];
-const infantsCounts = document.getElementById("infants-count");
-var count = 0;
-defaultBtn3.innerHTML = count;
-decrementBtn3.addEventListener("click", DecreaseValue3);
-function DecreaseValue3() {
-  if (count <= 0) {
-    count = 0;
-  } else {
-    count--;
-    defaultBtn3.innerHTML = count;
-    infantsCounts.innerHTML = count;
-  }
+  count2++;
+  defaultBtn2.innerHTML = count2;
+  childCounts.innerHTML = count2;
 }
 
-incrementBtn3.addEventListener("click", IncreaseValue3);
-function IncreaseValue3() {
-  count++;
-  defaultBtn3.innerHTML = count;
-  infantsCounts.innerHTML = count;
-}
 //click Event On Passengers seletion
 const others = document.getElementById("others");
 const showOthers = document.getElementById("selectpassengerFormDiv");
@@ -276,8 +280,18 @@ const returnDate = document.getElementById("return");
 var modal = document.getElementById("from");
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target !== modal) {
-    clicked2.style.display = "none";
-  }
-};
+// window.onclick = function (event) {
+//   if (event.target !== modal) {
+//     clicked2.style.display = "none";
+//   }
+// };
+
+// document.getElementById("addlocation-button").addEventListener("click", (e) => {
+//   debugger;
+//   var locationsContainer = document.querySelectorAll(
+//     ".location-row > .fligts-info"
+//   );
+//   console.log(locationsContainer);
+//   var elementToCopy = locationsContainer[0].innerHTML;
+//   document.getElementById("locations-contianer").innerHTML += elementToCopy;
+// });
